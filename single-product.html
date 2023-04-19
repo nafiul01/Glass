@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenses & Glasses - Home</title>
+    <title>Lenses & Glasses - Single Product</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -61,79 +61,72 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-[#e3ffe6] h-screen max-h-[500px]">
-      <div class="custom-container">
+<!-- Single Product Section -->
+    <section class="custom-container grid grid-cols-3 content-start py-20 gap-10">
+      <!-- Product Images -->
+      <div class="col-span-2 grid grid-cols-2 gap-5">
+        <img src="img/Glass-Product (1).webp" alt="">
+        <img src="img/Glass-Product (2).webp" alt="">
+        <img src="img/Glass-Product (3).webp" alt="">
+        <img src="img/Glass-Product (4).webp" alt="">
+      </div>
+
+      <!-- Product Details Section -->
+      <div class="col-span-1 flex flex-col items-start gap-2">
+        <p class="font-semibold text-gray-500">Product Category</p>
+        <h6 class="font-semibold -ml-[2px]">Product Name</h6>
+        <p class="mt-5">Proudct Size: Value</p>
+        <div class="flex items-center gap-5">
+          <p>Price:</p>
+          <p class="font-semibold text-green-500 border-green-500 border-2 rounded-lg px-3 py-[0.125rem]">$52</p>
+        </div>
+
+        <div class="accordion w-full mt-5">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-gray-100 p-3 text-base flex justify-between items-center w-full" type="button">
+                <span class="">Technical Information</span>
+                <i class="fas fa-chevron-down ml-auto"></i>
+              </button>
+            </h2>
+            <div class="accordion-collapse duration-300">
+              <div class="accordion-body px-3 mt-2">
+                Techincal Information content goes here
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion w-full mt-2">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-gray-100 p-3 text-base flex justify-between items-center w-full" type="button">
+                <span class="">Reviews(<span>0</span>)</span>
+                <i class="fas fa-chevron-down ml-auto"></i>
+              </button>
+            </h2>
+            <div class="accordion-collapse duration-300">
+              <div class="accordion-body px-3 mt-2">
+                Reviews Details will go here
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="primary-btn w-full mt-4">Add to cart</button>
         
-        <div class="flex flex-col items-start justify-center h-screen max-h-[500px] relative gap-5">
-          <span class="text-xl font-medium text-gray-600">In this season, find the best 🔥</span>
-          <h1 class="font-bold max-w-4xl -ml-1 z-20 leading-none">Exclusive collection for everyone</h1>
-          <a class="flex items-center gap-3 text-white bg-gray-900 mt-4 px-6 py-4 rounded-full" href="">
-            <span class="font-bold">Explore Now</span>
-            <i class="fas fa-solid fa-magnifying-glass"></i>
-          </a>
-          <img class="absolute right-0 z-10 max-h-[500px]" src="img/hero-right-2.webp" alt="">
-        </div>
-      </div>
+        
 
+      </div>
     </section>
 
 
-
-
-  <!-- Offer Products -->
-    <section class="custom-container py-20">
-
-      
-      <div class="swiper mySwiper">
-
-        <div class="flex justify-between items-center">
-          <h5 class="font-medium">Discover more. <span class="text-tColor">Good things are waiting for you</span></h5>
-          <div class="flex gap-7 text-tColor">
-            <i class="fas fa-regular fa-arrow-left slider-arrow relative"><div class="swiper-button-prev absolute opacity-0"></div></i>
-            <i class="fas fa-regular fa-arrow-right slider-arrow relative"><div class="swiper-button-next absolute opacity-0"></div></i>
-          </div>
-          
-        </div>
-
-        <div class="swiper-wrapper mt-16">
-          <!-- Slider Starts Here -->
-          <div class="swiper-slide bg-orange-100 hover:bg-orange-200 px-5 py-10 rounded-lg relative">
-            <span class="font-medium text-tColor">Explore new arrivals</span>
-            <h6 class="font-semibold mb-14 max-w-[200px] z-20">Shop the latest from top brands</h6>
-            <a class="menu-btn shadow" href="single-product.html">Show me all</a>
-            <img class="absolute right-2 top-[50%] h-60 -translate-y-[50%] z-10 max-w-[250px] h-auto" src="img/Glass (1).png" alt="">
-          </div>
-  
-          <div class="swiper-slide bg-orange-200 hover:bg-orange-300 px-5 py-10 rounded-lg relative">
-            <span class="font-medium text-tColor">Digital gift cards</span>
-            <h6 class="font-semibold mb-14 max-w-[200px] z-20">Shop the latest from top brands</h6>
-            <a class="menu-btn shadow" href="single-product.html">Show me all</a>
-            <img class="absolute right-2 top-[50%] h-60 -translate-y-[50%] z-10 max-w-[250px] h-auto" src="img/Glass (2).png" alt="">
-          </div>
-  
-          <div class="swiper-slide bg-slate-300 hover:bg-slate-400 px-5 py-10 rounded-lg relative">
-            <span class="font-medium text-tColor">Sale collection</span>
-            <h6 class="font-semibold mb-14 max-w-[200px] z-20">Shop the latest from top brands</h6>
-            <a class="menu-btn shadow" href="single-product.html">Show me all</a>
-            <img class="absolute right-2 top-[50%] h-60 -translate-y-[50%] z-10 max-w-[250px] h-auto" src="img/Glass (3).png" alt="">
-          </div>
-  
-        </div>
-      </div>
-      
-
-    </section>
-
-
-
-
-<!-- Product Section -->
+<!-- Related Product Section -->
     <section class="custom-container py-20">
 
       <div class="swiper mySwiper_2">
         <div class="flex justify-between items-center">
-          <h5 class="font-medium">New Arrivals. <span class="text-tColor">REY backpacks & bags</span></h5>
+          <h5 class="font-medium">Related Products</h5>
           <div class="flex gap-7 text-tColor">
             <i class="fas fa-regular fa-arrow-left slider-arrow relative"><div class="swiper-button-prev absolute opacity-0"></div></i>
             <i class="fas fa-regular fa-arrow-right slider-arrow relative"><div class="swiper-button-next absolute opacity-0"></div></i>
@@ -232,40 +225,6 @@
 
 
 
-<!-- Steps -->
-    <section class="custom-container grid grid-cols-4 py-20">
-
-      <div class="col-span-1 flex flex-col gap-4 px-8 items-center text-center">
-        <img class="h-40" src="img/HIW1img.webp" alt="">
-        <span class="text-sm font-semibold text-orange-800 bg-orange-100 rounded-3xl px-3 py-[0.3rem]">Step 1</span>
-        <p class="font-bold text-gray-800">Filter & Discover</p>
-        <p class="text-gray-500">Smart filtering and suggestions make it easy to find</p>
-      </div>
-
-      <div class="col-span-1 flex flex-col gap-4 px-8 items-center text-center">
-        <img class="h-40" src="img/HIW2img.webp" alt="">
-        <span class="text-sm font-semibold text-slate-800 bg-slate-100 rounded-3xl px-3 py-[0.3rem]">Step 2</span>
-        <p class="font-bold text-gray-800">Add to bag</p>
-        <p class="text-gray-500">Easily select the correct items and add them to the cart</p>
-      </div>
-
-      <div class="col-span-1 flex flex-col gap-4 px-8 items-center text-center">
-        <img class="h-40" src="img/HIW3img.webp" alt="">
-        <span class="text-sm font-semibold text-yellow-800 bg-yellow-100 rounded-3xl px-3 py-[0.3rem]">Step 3</span>
-        <p class="font-bold text-gray-800">Fast shipping</p>
-        <p class="text-gray-500">The carrier will confirm and ship quickly to you</p>
-      </div>
-
-      <div class="col-span-1 flex flex-col gap-4 px-8 items-center text-center">
-        <img class="h-40" src="img/HIW4img.webp" alt="">
-        <span class="text-sm font-semibold text-violet-800 bg-violet-100 rounded-3xl px-3 py-[0.3rem]">Step 4</span>
-        <p class="font-bold text-gray-800">Enjoy the product</p>
-        <p class="text-gray-500">Have fun and enjoy your 5-star quality products</p>
-      </div>
-
-    </section>
-
-
 
 
 <!-- Footer Section -->
@@ -351,6 +310,24 @@
       prevEl: ".swiper-button-prev",
     },
     });
+
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+
+accordionButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const accordionCollapse = button.parentElement.nextElementSibling;
+    button.setAttribute('aria-expanded', button.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+    accordionCollapse.classList.toggle('hidden');
+  });
+});
+
+// Set all accordion items to collapsed state by default
+document.querySelectorAll('.accordion-collapse').forEach(collapse => {
+  collapse.classList.add('hidden');
+});
+
+
+
   </script>
 
 

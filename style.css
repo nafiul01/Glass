@@ -5,3 +5,7 @@
       padding: 0 1.2rem;
     }
 
+
+    .accordion-button[aria-expanded="true"] .fa-chevron-down {
+      transform: rotate(180deg);
+    }

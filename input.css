@@ -14,4 +14,8 @@
     .slider-arrow{
         @apply border-2 border-gray-300 rounded-[50%] py-[12px] px-[13px];
     }
+
+    .primary-btn{
+        @apply bg-green-200 hover:bg-green-300 text-tColor font-medium px-6 py-2 rounded-3xl;
+    }
 }
