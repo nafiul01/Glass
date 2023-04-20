@@ -9,3 +9,18 @@
     .accordion-button[aria-expanded="true"] .fa-chevron-down {
       transform: rotate(180deg);
     }
+
+    .product a{
+      opacity: 0;
+      transition: 0.1s;
+      -webkit-transition: 0.1s;
+      -moz-transition: 0.1s;
+      -ms-transition: 0.1s;
+      -o-transition: 0.1s;
+      bottom: -10%;
+}
+
+    .product:hover a{
+      opacity: 1;
+      bottom:10%;
+    }
