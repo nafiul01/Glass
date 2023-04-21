@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-</head>
 <body class="font-sans">
     
 
@@ -23,12 +22,58 @@
       
             <!-- Menu -->
             <div class="hidden md:block">
-              <nav class="flex gap-0 items-center text-center">
-                <a href="#" class="menu-btn">Eye Glasses</a>
-                <a href="#" class="menu-btn">Computer Glasses</a>
-                <a href="#" class="menu-btn">Kids Glasses</a>
-                <a href="#" class="menu-btn">Contact Lenses</a>
-                <a href="#" class="menu-btn">Sun Glasses</a>
+              <nav class="main-menu">
+                <ul class="flex gap-0 items-center text-center">
+                  <li>
+                    <a href="#" class="menu-btn">Eye Glasses</a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="#" class="menu-btn">Men</a>
+                      </li>
+                      <li>
+                        <a href="#" class="menu-btn">Women</a>
+                      </li>
+                      <li>
+                        <a href="#" class="menu-btn">Kid</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="menu-btn">Computer Glasses</a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="#" class="menu-btn">Men</a>
+                      </li>
+                      <li>
+                        <a href="#" class="menu-btn">Women</a>
+                      </li>
+                      <li>
+                        <a href="#" class="menu-btn">Kid</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="menu-btn">Sun Glasses</a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="#" class="menu-btn">Men</a>
+                      </li>
+                      <li>
+                        <a href="#" class="menu-btn">Women</a>
+                      </li>
+                      <li>
+                        <a href="#" class="menu-btn">Kid</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="menu-btn">Kids Glasses</a>
+                    
+                  </li>
+                  <li>
+                    <a href="#" class="menu-btn">Contact Lenses</a>
+                  </li>
+                </ul>
               </nav>
             </div>
       
@@ -85,7 +130,7 @@
     <section class="custom-container py-20">
 
       
-      <div class="swiper mySwiper">
+      <div class="swiper mySwiperRecent">
 
         <div class="flex justify-between items-center">
           <h5 class="font-medium">Discover more. <span class="text-tColor">Good things are waiting for you</span></h5>
@@ -131,7 +176,7 @@
 <!-- Product Section -->
     <section class="custom-container py-20">
 
-      <div class="swiper mySwiper_2">
+      <div class="swiper mySwiperProduct">
         <div class="flex justify-between items-center">
           <h5 class="font-medium">New Arrivals. <span class="text-tColor">REY backpacks & bags</span></h5>
           <div class="flex gap-7 text-tColor">
@@ -342,7 +387,8 @@
 
   <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
+
+    var swiperRecent = new Swiper(".mySwiperRecent", {
       slidesPerView: 2,
       spaceBetween: 30,
       loop: true,
@@ -356,7 +402,7 @@
     },
     });
 
-    var swiper = new Swiper(".mySwiper_2", {
+    var swiperProduct = new Swiper(".mySwiperProduct", {
       slidesPerView: 4,
       spaceBetween: 30,
       loop: true,
@@ -369,6 +415,9 @@
       prevEl: ".swiper-button-prev",
     },
     });
+
+
+
   </script>
 
 

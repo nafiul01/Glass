@@ -24,3 +24,35 @@
       opacity: 1;
       bottom:10%;
     }
+
+    .main-menu ul li {
+      position: relative;
+    }
+    
+    .main-menu .sub-menu {
+      position: absolute;
+      width: 100%;
+      background: #fff;
+      top: 120%;
+      left: 0;
+      padding: 12px 0;
+      border-radius: 5px;
+      box-shadow: 0 0 3px 3px #f6f6f6;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 99999;
+    }
+    
+    .main-menu .sub-menu li a {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    
+    .main-menu > ul > li:hover .sub-menu {
+      visibility: visible;
+      opacity: 1;
+    }
+    
