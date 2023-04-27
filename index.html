@@ -107,17 +107,17 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-[#e3ffe6] h-screen max-h-[500px]">
+    <section class="bg-[#e3ffe6] h-screen sm:max-h-[500px]">
       <div class="custom-container">
         
-        <div class="flex flex-col items-start justify-center h-screen max-h-[500px] relative gap-5">
+        <div class="flex flex-col items-center sm:items-start justify-start py-10 sm:py-0 sm:justify-center h-screen max-h-[500px] relative gap-5">
           <span class="text-xl font-medium text-gray-600">In this season, find the best 🔥</span>
-          <h1 class="font-bold max-w-4xl -ml-1 z-20 leading-none">Exclusive collection for everyone</h1>
+          <h1 class="text-[3rem] font-bold max-w-4xl text-center sm:text-left -ml-1 z-20 leading-none">Exclusive collection for everyone</h1>
           <a class="flex items-center gap-3 text-white bg-gray-900 mt-4 px-6 py-4 rounded-full" href="">
             <span class="font-bold">Explore Now</span>
             <i class="fas fa-solid fa-magnifying-glass"></i>
           </a>
-          <img class="absolute right-0 z-10 max-h-[500px]" src="img/hero-right-2.webp" alt="">
+          <img class="absolute right-0 -bottom-2/4 sm:bottom-auto z-10 max-h-[500px]" src="img/hero-right-2.webp" alt="">
         </div>
       </div>
 
@@ -188,7 +188,7 @@
         <div class="swiper-wrapper">
           <!-- Product Section Starts Here -->
           <div class="swiper-slide product col-span-1 mt-16">
-            <div class="relative">
+            <div class="relative flex justify-center">
               <img class="bg-slate-200 rounded-3xl" src="img/Glass-Product (1).webp" alt="">
                <a class="absolute left-1/2 -translate-x-1/2 bg-gray-100 hover:bg-gray-200 shadow px-4 py-2 rounded-2xl text-sm font-semibold" href=""><button>Add to cart</button></a>
             </div>
@@ -205,7 +205,7 @@
           </div>
   
           <div class="swiper-slide product col-span-1 mt-16">
-            <div class="relative">
+            <div class="relative flex justify-center">
               <img class="bg-slate-200 rounded-3xl" src="img/Glass-Product (2).webp" alt="">
                <a class="absolute left-1/2 -translate-x-1/2 bg-gray-100 hover:bg-gray-200 shadow px-4 py-2 rounded-2xl text-sm font-semibold" href=""><button>Add to cart</button></a>
             </div>
@@ -222,7 +222,7 @@
           </div>
   
           <div class="swiper-slide product col-span-1 mt-16">
-            <div class="relative">
+            <div class="relative flex justify-center">
               <img class="bg-slate-200 rounded-3xl" src="img/Glass-Product (3).webp" alt="">
                <a class="absolute left-1/2 -translate-x-1/2 bg-gray-100 hover:bg-gray-200 shadow px-4 py-2 rounded-2xl text-sm font-semibold" href=""><button>Add to cart</button></a>
             </div>
@@ -239,7 +239,7 @@
           </div>
   
           <div class="swiper-slide product col-span-1 mt-16">
-            <div class="relative">
+            <div class="relative flex justify-center">
               <img class="bg-slate-200 rounded-3xl" src="img/Glass-Product (4).webp" alt="">
                <a class="absolute left-1/2 -translate-x-1/2 bg-gray-100 hover:bg-gray-200 shadow px-4 py-2 rounded-2xl text-sm font-semibold" href=""><button>Add to cart</button></a>
             </div>
@@ -256,7 +256,7 @@
           </div>
 
           <div class="swiper-slide product col-span-1 mt-16">
-            <div class="relative">
+            <div class="relative flex justify-center">
               <img class="bg-slate-200 rounded-3xl" src="img/Glass-Product (1).webp" alt="">
                <a class="absolute left-1/2 -translate-x-1/2 bg-gray-100 hover:bg-gray-200 shadow px-4 py-2 rounded-2xl text-sm font-semibold" href=""><button>Add to cart</button></a>
             </div>
@@ -273,7 +273,7 @@
           </div>
 
           <div class="swiper-slide product col-span-1 mt-16">
-            <div class="relative">
+            <div class="relative flex justify-center">
               <img class="bg-slate-200 rounded-3xl" src="img/Glass-Product (2).webp" alt="">
                <a class="absolute left-1/2 -translate-x-1/2 bg-gray-100 hover:bg-gray-200 shadow px-4 py-2 rounded-2xl text-sm font-semibold" href=""><button>Add to cart</button></a>
             </div>
@@ -296,7 +296,7 @@
 
 
 <!-- Steps -->
-    <section class="custom-container grid grid-cols-4 py-20">
+    <section class="custom-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 py-20">
 
       <div class="col-span-1 flex flex-col gap-4 px-8 items-center text-center">
         <img class="h-40" src="img/HIW1img.webp" alt="">
@@ -333,8 +333,8 @@
 
 <!-- Footer Section -->
     <footer class="bg-slate-100 py-10">
-        <div class="custom-container grid grid-cols-5">
-          <div class="col-span-1">
+        <div class="custom-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-0">
+          <div class="">
             <img class="h-16" src="img/Site-Logo.png" alt="">
             <div class="flex gap-5 mt-5 text-[#ddbc7c] text-lg">
               <a href=""><i class="hover:text-black duration-300 fas fa-brands fa-facebook"></i></i></a>
@@ -389,9 +389,30 @@
   <script>
 
     var swiperRecent = new Swiper(".mySwiperRecent", {
-      slidesPerView: 2,
+      slidesPerView: 4,
       spaceBetween: 30,
       loop: true,
+      breakpoints: {
+     // when window width is >= 320px
+     320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+     },
+     // when window width is >= 480px
+     768: {
+      slidesPerView: 1,
+      spaceBetween: 30
+     },
+     // when window width is >= 640px
+     1024: {
+      slidesPerView: 2,
+      spaceBetween: 40
+     },
+     1200: {
+      slidesPerView: 2,
+      spaceBetween: 40
+     }
+    },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -406,6 +427,23 @@
       slidesPerView: 4,
       spaceBetween: 30,
       loop: true,
+      breakpoints: {
+     // when window width is >= 320px
+     320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+     },
+     // when window width is >= 480px
+     768: {
+      slidesPerView: 2,
+      spaceBetween: 30
+     },
+     // when window width is >= 640px
+     1024: {
+      slidesPerView: 3,
+      spaceBetween: 40
+     }
+    },
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
