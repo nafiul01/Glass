@@ -621,6 +621,14 @@ h6 {
   bottom: 0px;
 }
 
+.-bottom-2\/4 {
+  bottom: -50%;
+}
+
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -645,26 +653,6 @@ h6 {
   top: 50%;
 }
 
-.bottom-1 {
-  bottom: 0.25rem;
-}
-
-.bottom-0 {
-  bottom: 0px;
-}
-
-.bottom-3\/4 {
-  bottom: 75%;
-}
-
-.-bottom-3\/4 {
-  bottom: -75%;
-}
-
-.-bottom-2\/4 {
-  bottom: -50%;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -675,10 +663,6 @@ h6 {
 
 .col-span-1 {
   grid-column: span 1 / span 1;
-}
-
-.col-span-2 {
-  grid-column: span 2 / span 2;
 }
 
 .col-span-3 {
@@ -757,10 +741,6 @@ h6 {
   margin-top: 1.25rem;
 }
 
-.-mt-10 {
-  margin-top: -2.5rem;
-}
-
 .block {
   display: block;
 }
@@ -825,10 +805,6 @@ h6 {
   width: 50%;
 }
 
-.w-1\/4 {
-  width: 25%;
-}
-
 .w-24 {
   width: 6rem;
 }
@@ -845,6 +821,10 @@ h6 {
   width: 1rem;
 }
 
+.w-\[110\%\] {
+  width: 110%;
+}
+
 .w-\[300px\] {
   width: 300px;
 }
@@ -859,14 +839,6 @@ h6 {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[110\%\] {
-  width: 110%;
-}
-
-.w-\[120\%\] {
-  width: 120%;
 }
 
 .max-w-4xl {
@@ -1000,10 +972,6 @@ h6 {
   gap: 2rem;
 }
 
-.gap-1 {
-  gap: 0.25rem;
-}
-
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1105,6 +1073,11 @@ h6 {
   background-color: rgb(254 215 170 / var(--tw-bg-opacity));
 }
 
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
 .bg-slate-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
@@ -1135,11 +1108,6 @@ h6 {
   background-color: rgb(254 249 195 / var(--tw-bg-opacity));
 }
 
-.bg-red-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
-}
-
 .fill-current {
   fill: currentColor;
 }
@@ -1154,10 +1122,6 @@ h6 {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-0 {
-  padding: 0px;
 }
 
 .px-10 {
@@ -1235,23 +1199,12 @@ h6 {
   padding-bottom: 0.3rem;
 }
 
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .pb-10 {
   padding-bottom: 2.5rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
 }
 
 .pb-4 {
@@ -1274,10 +1227,6 @@ h6 {
   padding-left: 1rem;
 }
 
-.pr-12 {
-  padding-right: 3rem;
-}
-
 .pr-4 {
   padding-right: 1rem;
 }
@@ -1290,10 +1239,6 @@ h6 {
   padding-top: 0.75rem;
 }
 
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1304,6 +1249,10 @@ h6 {
 
 .font-sans {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-\[3rem\] {
+  font-size: 3rem;
 }
 
 .text-base {
@@ -1329,15 +1278,6 @@ h6 {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-\[3rem\] {
-  font-size: 3rem;
 }
 
 .font-bold {
@@ -1568,10 +1508,6 @@ h6 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .sm\:flex-col {
-    flex-direction: column;
-  }
-
   .sm\:items-start {
     align-items: flex-start;
   }
@@ -1588,20 +1524,11 @@ h6 {
   .sm\:text-left {
     text-align: left;
   }
-
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
 }
 
 @media (min-width: 768px) {
   .md\:block {
     display: block;
-  }
-
-  .md\:flex {
-    display: flex;
   }
 
   .md\:hidden {
@@ -1621,13 +1548,19 @@ h6 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:bottom-auto {
-    bottom: auto;
-  }
-
   .lg\:h-screen {
     height: 100vh;
   }
@@ -1654,14 +1587,6 @@ h6 {
     grid-column: span 2 / span 2;
   }
 
-  .xl\:flex {
-    display: flex;
-  }
-
-  .xl\:hidden {
-    display: none;
-  }
-
   .xl\:w-1\/4 {
     width: 25%;
   }
@@ -1684,13 +1609,5 @@ h6 {
 
   .xl\:flex-row {
     flex-direction: row;
-  }
-
-  .xl\:p-5 {
-    padding: 1.25rem;
-  }
-
-  .xl\:pr-12 {
-    padding-right: 3rem;
   }
 }
