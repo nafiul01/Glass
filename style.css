@@ -25,6 +25,7 @@
       bottom:10%;
     }
 
+    @media (min-width: 768px) {
     .main-menu ul li {
       position: relative;
     }
@@ -33,7 +34,6 @@
       position: absolute;
       width: 100%;
       background: #fff;
-      top: 120%;
       left: 0;
       padding: 12px 0;
       border-radius: 5px;
@@ -43,16 +43,22 @@
       z-index: 99999;
     }
     
-    .main-menu .sub-menu li a {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      display: inline-block;
-    }
     
     .main-menu > ul > li:hover .sub-menu {
       visibility: visible;
       opacity: 1;
     }
     
+  }
+
+  .main-menu .sub-menu li a {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  .sub-menu{
+    margin-top: 7px;
+  }

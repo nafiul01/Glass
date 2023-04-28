@@ -13,21 +13,25 @@
 <body class="font-sans">
     
 
-  <header class="bg-white shadow">
+  <header class="bg-white shadow fixed top-0 left-0 right-0 z-50">
     <div class="custom-container">
       <div class="flex justify-between items-center h-20">
+
         <!-- Logo --> 
         <div class="flex-shrink-0 flex items-center">
           <a href="index.html"><img class="h-10 w-auto" src="img/Site-Logo.png" alt="Logo"></a>
         </div>
   
         <!-- Menu -->
-        <div class="hidden md:block">
+        <div class="hidden md:block absolute top-16 right-5 md:static bg-white z-40" id="toggle-menu">
           <nav class="main-menu">
-            <ul class="flex gap-0 items-center text-center">
+            <ul class="flex flex-col md:flex-row gap-5 md:gap-0 items-center text-center text-[10px] lg:text-base">
+
               <li>
-                <a href="#" class="menu-btn">Eye Glasses</a>
-                <ul class="sub-menu">
+                <div>
+                <a href="#" class="menu-btn subMenu-button">Eye Glasses</a>
+                </div>
+                <ul class="sub-menu subMenu-collapse">
                   <li>
                     <a href="#" class="menu-btn">Men</a>
                   </li>
@@ -39,9 +43,12 @@
                   </li>
                 </ul>
               </li>
+
               <li>
-                <a href="#" class="menu-btn">Computer Glasses</a>
-                <ul class="sub-menu">
+                <div>
+                <a href="#" class="menu-btn subMenu-button">Computer Glasses</a>
+                </div>
+                <ul class="sub-menu subMenu-collapse">
                   <li>
                     <a href="#" class="menu-btn">Men</a>
                   </li>
@@ -53,9 +60,12 @@
                   </li>
                 </ul>
               </li>
+
               <li>
-                <a href="#" class="menu-btn">Sun Glasses</a>
-                <ul class="sub-menu">
+                <div>
+                <a href="#" class="menu-btn subMenu-button">Sun Glasses</a>
+                </div>
+                <ul class="sub-menu subMenu-collapse">
                   <li>
                     <a href="#" class="menu-btn">Men</a>
                   </li>
@@ -67,12 +77,17 @@
                   </li>
                 </ul>
               </li>
+
               <li>
-                <a href="#" class="menu-btn">Kids Glasses</a>
+                <div>
+                <a href="#" class="menu-btn subMenu-button">Kids Glasses</a>
+                </div>
                 
               </li>
               <li>
-                <a href="#" class="menu-btn">Contact Lenses</a>
+                <div>
+                <a href="#" class="menu-btn subMenu-button">Contact Lenses</a>
+                </div>
               </li>
             </ul>
           </nav>
@@ -81,31 +96,33 @@
        
         <!-- Search, User & Cart -->
         <div class="flex items-center gap-2">
-          <div class="hidden md:block">
+          <div class="">
             <a href="cart.html" class="menu-icons">
               <i class="fas fa-solid fa-magnifying-glass"></i>
             </a>
           </div>
 
-          <div class="hidden md:block">
+          <div class="">
             <a href="login.html" class="menu-icons">
               <i class="fas fa-user"></i>
             </a>
           </div>
 
-          <div class="hidden md:block">
+          <div class="">
             <a href="product.html" class="menu-icons">
               <i class="fas fa-shopping-cart"></i>
             </a>
           </div>
-          <div class="md:hidden flex items-center">
-                <button class="text-gray-600 hover:text-gray-900">
-                <i class="fas fa-bars"></i>
-                </button>
+
+          <div class="md:hidden flex items-center ml-4">
+            <button id="toggle-button" class="text-gray-600 hover:text-gray-900">
+            <i class="fas fa-bars"></i>
+            </button>
           </div>
         </div>
     </div>
 </header>
+<div class="h-20"></div>
 
 <!-- Cart Section -->
     <section class="custom-container py-20">
@@ -485,39 +502,42 @@
 
 
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- Header Section Script -->
+<script> 
+  // Menu toggle button 
+    const toggleButton = document.getElementById("toggle-button");
+    const toggleMenu = document.getElementById("toggle-menu");
+    var toggleCounter = 1;
+    toggleButton.onclick = function () {
+      toggleCounter++;
+      if(toggleCounter%2 == 0){
+        toggleMenu.classList.remove("hidden");
+        toggleMenu.classList.add("flex");
+      }
+      else{
+        toggleMenu.classList.remove("flex");
+        toggleMenu.classList.add("hidden");
+      }
+    }
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 2,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    // Sub menu items
+    if(screen.width < 768){
+    const subMenuButtons = document.querySelectorAll('.subMenu-button');
+    subMenuButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const subMenuCollapse = button.parentElement.nextElementSibling;
+        button.setAttribute('aria-expanded', button.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+        subMenuCollapse.classList.toggle('hidden');
+      });
     });
 
-    var swiper = new Swiper(".mySwiper_2", {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    // Set all subMenu items to collapsed state by default
+    document.querySelectorAll('.subMenu-collapse').forEach(collapse => {
+      collapse.classList.add('hidden');
     });
+  }
   </script>
+
 
 
 
