@@ -125,145 +125,149 @@
 <div class="h-20"></div>
 
 
-    <section class="custom-container grid sm:grid-cols-1 mg:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-20 gap-10">
+    <section class="custom-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-5 md:py-20 gap-10">
 
       <!-- Filter Section -->
         <div class="col-span-1">
-          <!-- Filter Frame Type -->
-          <div class="pb-4 border-b-2 border-gray-200">
-            <p class="font-semibold text-tColor">Frame Type</p>
-            <div class="grid grid-cols-3 mt-3 gap-2">
-              
-              <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300" >
-                <img src="img/FullRim.png" alt="">
-                <p class="text-xs text-center">Full Rim</p>
-              </a>
+          <div>
+            <button id="filter-button" class="md:hidden bg-slate-200 px-3 py-2 rounded-md mb-4">Filters <i class="fas fa-solid fa-sliders pl-2"></i></button>
+          </div>
+          <div id="filter-menu" class="hidden grid md:grid">
+            <!-- Filter Frame Type -->
+            <div class="pb-4 border-b-2 border-gray-200">
+              <p class="font-semibold text-tColor">Frame Type</p>
+              <div class="grid grid-cols-3 mt-3 gap-2">
+                
+                <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300" >
+                  <img src="img/FullRim.png" alt="">
+                  <p class="text-xs text-center">Full Rim</p>
+                </a>
 
-              <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
-                <img src="img/FullRim.png" alt="">
-                <p class="text-xs text-center">Full Rim</p>
-              </a>
+                <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
+                  <img src="img/FullRim.png" alt="">
+                  <p class="text-xs text-center">Full Rim</p>
+                </a>
 
-              <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
-                <img src="img/FullRim.png" alt="">
-                <p class="text-xs text-center">Full Rim</p>
-              </a>
-              
+                <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
+                  <img src="img/FullRim.png" alt="">
+                  <p class="text-xs text-center">Full Rim</p>
+                </a>
+                
+              </div>
+            </div>
+
+            <!-- Filter Frame Shape -->
+            <div class="pt-3 pb-4 border-b-2 border-gray-200">
+              <p class="font-semibold text-tColor">Frame Shape</p>
+              <div class="grid grid-cols-3 mt-3 gap-2">
+                
+                <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300" >
+                  <img src="img/Rectangle.png" alt="">
+                  <p class="text-xs text-center">Rectangle</p>
+                </a>
+
+                <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
+                  <img src="img/Round.png" alt="">
+                  <p class="text-xs text-center">Round</p>
+                </a>
+
+                <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
+                  <img src="img/CatEye.png" alt="">
+                  <p class="text-xs text-center">Cat Eye</p>
+                </a>
+
+                <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
+                  <img src="img/Square.png" alt="">
+                  <p class="text-xs text-center">Square</p>
+                </a>
+
+                <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
+                  <img src="img/Wayfarer.png" alt="">
+                  <p class="text-xs text-center">Wayfarer</p>
+                </a>
+
+                <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
+                  <img src="img/Geometric.png" alt="">
+                  <p class="text-xs text-center">Geometric</p>
+                </a>
+
+                <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
+                  <img src="img/Aviator.png" alt="">
+                  <p class="text-xs text-center">Aviator</p>
+                </a>
+
+                <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
+                  <img src="img/Hexagonal.png" alt="">
+                  <p class="text-xs text-center">Hexagonal</p>
+                </a>
+                
+              </div>
+            </div>
+
+            <!-- Frame Color -->
+            <div class="pt-3 pb-4 border-b-2 border-gray-200">
+              <p class="font-semibold text-tColor">Frame Color</p>
+              <div class="text-tColor mt-3 grid gap-3">
+                <div>
+                  <input type="checkbox" id="color-black" name="color-black" value="Black">
+                  <label class="ml-2" for="color-black">Black (<span>20</span>)</label><br>
+                </div>
+                
+                <div>
+                  <input type="checkbox" id="color-blue" name="color-blue" value="Blue">
+                  <label class="ml-2" for="color-blue">Blue (<span>15</span>)</label><br>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="color-green" name="color-green" value="Green">
+                  <label class="ml-2" for="color-green">Green (<span>33</span>)</label><br>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="color-red" name="color-red" value="Red">
+                  <label class="ml-2" for="color-red">Red (<span>25</span>)</label><br>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="color-yellow" name="color-yellow" value="Yellow">
+                  <label class="ml-2" for="color-yellow">Yellow (<span>11</span>)</label><br>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="color-pink" name="color-pink" value="Pink">
+                  <label class="ml-2" for="color-pink">Pink (<span>27</span>)</label><br>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Brands -->
+            <div class="pt-3">
+              <p class="font-semibold text-tColor">Brands</p>
+              <div class="text-tColor mt-3 grid gap-3">
+                <div>
+                  <input type="checkbox" id="color-black" name="color-black" value="Black">
+                  <label class="ml-2" for="color-black">Brand 1 (<span>20</span>)</label><br>
+                </div>
+                
+                <div>
+                  <input type="checkbox" id="color-blue" name="color-blue" value="Blue">
+                  <label class="ml-2" for="color-blue">Brand 2 (<span>15</span>)</label><br>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="color-green" name="color-green" value="Green">
+                  <label class="ml-2" for="color-green">Brand 3 (<span>33</span>)</label><br>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="color-red" name="color-red" value="Red">
+                  <label class="ml-2" for="color-red">Brand 4 (<span>25</span>)</label><br>
+                </div>
+
+              </div>
             </div>
           </div>
-
-          <!-- Filter Frame Shape -->
-          <div class="pt-3 pb-4 border-b-2 border-gray-200">
-            <p class="font-semibold text-tColor">Frame Shape</p>
-            <div class="grid grid-cols-3 mt-3 gap-2">
-              
-              <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300" >
-                <img src="img/Rectangle.png" alt="">
-                <p class="text-xs text-center">Rectangle</p>
-              </a>
-
-              <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
-                <img src="img/Round.png" alt="">
-                <p class="text-xs text-center">Round</p>
-              </a>
-
-              <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
-                <img src="img/CatEye.png" alt="">
-                <p class="text-xs text-center">Cat Eye</p>
-              </a>
-
-              <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
-                <img src="img/Square.png" alt="">
-                <p class="text-xs text-center">Square</p>
-              </a>
-
-              <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
-                <img src="img/Wayfarer.png" alt="">
-                <p class="text-xs text-center">Wayfarer</p>
-              </a>
-
-              <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
-                <img src="img/Geometric.png" alt="">
-                <p class="text-xs text-center">Geometric</p>
-              </a>
-
-              <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
-                <img src="img/Aviator.png" alt="">
-                <p class="text-xs text-center">Aviator</p>
-              </a>
-
-              <a href="#" class="flex flex-col justify-center items-center border-2 p-2 opacity-70 hover:opacity-100 hover:border-gray-300"" >
-                <img src="img/Hexagonal.png" alt="">
-                <p class="text-xs text-center">Hexagonal</p>
-              </a>
-              
-            </div>
-          </div>
-
-          <!-- Frame Color -->
-          <div class="pt-3 pb-4 border-b-2 border-gray-200">
-            <p class="font-semibold text-tColor">Frame Color</p>
-            <div class="text-tColor mt-3 grid gap-3">
-              <div>
-                <input type="checkbox" id="color-black" name="color-black" value="Black">
-                <label class="ml-2" for="color-black">Black (<span>20</span>)</label><br>
-              </div>
-              
-              <div>
-                <input type="checkbox" id="color-blue" name="color-blue" value="Blue">
-                <label class="ml-2" for="color-blue">Blue (<span>15</span>)</label><br>
-              </div>
-
-              <div>
-                <input type="checkbox" id="color-green" name="color-green" value="Green">
-                <label class="ml-2" for="color-green">Green (<span>33</span>)</label><br>
-              </div>
-
-              <div>
-                <input type="checkbox" id="color-red" name="color-red" value="Red">
-                <label class="ml-2" for="color-red">Red (<span>25</span>)</label><br>
-              </div>
-
-              <div>
-                <input type="checkbox" id="color-yellow" name="color-yellow" value="Yellow">
-                <label class="ml-2" for="color-yellow">Yellow (<span>11</span>)</label><br>
-              </div>
-
-              <div>
-                <input type="checkbox" id="color-pink" name="color-pink" value="Pink">
-                <label class="ml-2" for="color-pink">Pink (<span>27</span>)</label><br>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Brands -->
-          <div class="pt-3">
-            <p class="font-semibold text-tColor">Brands</p>
-            <div class="text-tColor mt-3 grid gap-3">
-              <div>
-                <input type="checkbox" id="color-black" name="color-black" value="Black">
-                <label class="ml-2" for="color-black">Brand 1 (<span>20</span>)</label><br>
-              </div>
-              
-              <div>
-                <input type="checkbox" id="color-blue" name="color-blue" value="Blue">
-                <label class="ml-2" for="color-blue">Brand 2 (<span>15</span>)</label><br>
-              </div>
-
-              <div>
-                <input type="checkbox" id="color-green" name="color-green" value="Green">
-                <label class="ml-2" for="color-green">Brand 3 (<span>33</span>)</label><br>
-              </div>
-
-              <div>
-                <input type="checkbox" id="color-red" name="color-red" value="Red">
-                <label class="ml-2" for="color-red">Brand 4 (<span>25</span>)</label><br>
-              </div>
-
-            </div>
-          </div>
-
 
         </div>
 
@@ -485,8 +489,8 @@
 <!-- Header Section Script -->
 <script> 
   // Menu toggle button 
-    const toggleButton = document.getElementById("toggle-button");
-    const toggleMenu = document.getElementById("toggle-menu");
+    const toggleButton = document.getElementById("filter-button");
+    const toggleMenu = document.getElementById("filter-menu");
     var toggleCounter = 1;
     toggleButton.onclick = function () {
       toggleCounter++;
@@ -516,6 +520,23 @@
       collapse.classList.add('hidden');
     });
   }
+  </script>
+
+<script> 
+  // Filter toggle button 
+    const filterButton = document.getElementById("toggle-button");
+    const filterMenu = document.getElementById("toggle-menu");
+    var filterCounter = 1;
+    filterButton.onclick = function () {
+      filterCounter++;
+      if(filterCounter%2 == 0){
+        filterMenu.classList.remove("hidden");
+      }
+      else{
+        filterMenu.classList.add("hidden");
+      }
+    }
+
   </script>
 
 
