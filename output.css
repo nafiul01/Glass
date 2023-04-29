@@ -681,6 +681,10 @@ h6 {
   z-index: 50;
 }
 
+.z-\[100\] {
+  z-index: 100;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -815,6 +819,14 @@ h6 {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-4\/5 {
+  height: 80%;
+}
+
+.h-3\/5 {
+  height: 60%;
 }
 
 .max-h-\[500px\] {
@@ -998,6 +1010,10 @@ h6 {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1126,6 +1142,16 @@ h6 {
 .bg-yellow-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 249 195 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
 .fill-current {
@@ -1576,6 +1602,10 @@ h6 {
     display: none;
   }
 
+  .md\:h-auto {
+    height: auto;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1586,6 +1616,19 @@ h6 {
 
   .md\:gap-0 {
     gap: 0px;
+  }
+
+  .md\:overflow-auto {
+    overflow: auto;
+  }
+
+  .md\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .md\:p-0 {
+    padding: 0px;
   }
 
   .md\:px-20 {
