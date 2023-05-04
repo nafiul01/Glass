@@ -18,4 +18,12 @@
     .primary-btn{
         @apply bg-green-200 hover:bg-green-300 text-tColor font-medium px-6 py-2 rounded-3xl;
     }
+
+    .profile-table th{
+        @apply text-center font-semibold text-tColor border-b-2 pb-3;
+    }
+
+    .profile-table td{
+        @apply text-center font-semibold border-b-2 py-3;
+    }
 }
