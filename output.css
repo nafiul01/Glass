@@ -1924,4 +1924,24 @@ h6 {
   .xl\:gap-14 {
     gap: 3.5rem;
   }
+
+  .xl\:gap-8 {
+    gap: 2rem;
+  }
+
+  .xl\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .xl\:gap-5 {
+    gap: 1.25rem;
+  }
+
+  .xl\:gap-4 {
+    gap: 1rem;
+  }
+
+  .xl\:gap-0 {
+    gap: 0px;
+  }
 }
