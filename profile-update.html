@@ -126,22 +126,24 @@
     <section class="custom-container grid grid-cols-1 md:grid-cols-6 gap-4 py-0 md:py-10">
         <!-- Profile Menu -->
         <div class="col-span-1 relative">
-            <nav class="hidden absolute md:static top-24 left-0 py-2 md:py-0 z-30 bg-gradient-to-r from-orange-600 to-orange-400 md:from-white md:to-white md:grid gap-1 md:gap-3 text-sm md:text-base font-semibold text-white md:text-tColor rounded-md" id="toggle-menu-two">
-                <a class="px-3 py-2 hover:bg-gray-200" href="#">My Profile</a>
-                <a class="px-3 py-2 hover:bg-gray-200" href="#">Address Book</a>
-                <a class="px-3 py-2 hover:bg-gray-200" href="#">My Payment Address</a>
-                <a class="px-3 py-2 hover:bg-gray-200" href="#">Vouchers</a>
-                <a class="px-3 py-2 hover:bg-gray-200" href="orders.html">My Orders</a>
-                <a class="px-3 py-2 hover:bg-gray-200" href="#">My Review</a>
-                <a class="px-3 py-2 hover:bg-gray-200" href="#">My Wishlist</a>
-            </nav>
+          <nav class="hidden absolute md:static top-24 left-0 py-2 md:py-0 z-30 bg-gradient-to-r from-orange-600 to-orange-400 md:from-white md:to-white md:grid gap-1 md:gap-2 text-sm md:text-base font-semibold text-white md:text-tColor rounded-md" id="toggle-menu-two">
+              <a class="px-3 py-2 hover:bg-gray-200" href="profile.html">My Profile</a>
+              <a class="px-3 py-2 hover:bg-gray-200" href="orders.html">My Orders</a>
+              <a class="px-3 py-2 hover:bg-gray-200 flex items-center gap-2" href="#" id="profile-menubtn"><span>Settings</span> <i class="mt-1 fa-solid fa-angle-down"></i></a>
+                  <ul class="ml-5 px-3 hidden" id="profile-menu">
+                    <li><a href="profile-update.html" class="hover:text-primaryColor"><span>-</span> Information</a></li>
+                    <li><a href="" class="hover:text-primaryColor"><span>-</span> Password</a></li>
+                  </ul>
+              <a class="px-3 py-2 hover:bg-gray-200 flex items-center gap-2 text-orange-500 hover:text-red-600" href="#"><i class="fa-solid fa-right-from-bracket mt-[1px]"></i> <span>Logout</span></a>
+          </nav>
         </div>
+
 
         <!-- Profile Details -->
         <div class="col-span-5 grid gap-5">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-5 xl:gap-5">
 
-                <div class="col-span-1 flex justify-center gap-10 md:gap-5 xl:gap-5 items-center px-4 py-5 mb-5 md:mb-0 bg-gradient-to-r from-orange-600 to-orange-400 text-white rounded-md relative">
+                <div class="col-span-1 md:col-span-2 xl:col-span-1 flex justify-center gap-10 md:gap-5 xl:gap-5 items-center px-4 py-5 mb-5 md:mb-0 bg-gradient-to-r from-orange-600 to-orange-400 text-white rounded-md relative">
                     <img class="h-14 w-14 rounded-[50%]" src="img/Admin.png" alt="">
                     <div>
                         <a href="" class="bg-white text-orange-500 font-semibold text-sm p-2 rounded-md">Update Photo</a>
@@ -207,15 +209,15 @@
                     
                     <div class="p-5">
         
-                      <div class="flex gap-5">
-                        <div class="mb-4 w-1/2">
+                      <div class="flex flex-col md:flex-row gap-0 md:gap-5">
+                        <div class="mb-4 w-full md:w-1/2">
                           <label class="block text-gray-700 font-bold mb-2" for="first-name">
                             First Name
                           </label>
                           <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="first-name" type="text">
                         </div>
           
-                        <div class="mb-4 w-1/2">
+                        <div class="mb-4 w-full md:w-1/2">
                           <label class="block text-gray-700 font-bold mb-2" for="last-name">
                             Last Name
                           </label>
@@ -223,15 +225,15 @@
                         </div>
                       </div>
 
-                      <div class="flex gap-5">
-                        <div class="mb-4 w-1/2">
+                      <div class="flex flex-col md:flex-row gap-0 md:gap-5">
+                        <div class="mb-4 w-full md:w-1/2">
                           <label class="block text-gray-700 font-bold mb-2" for="first-name">
                             Email
                           </label>
                           <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="first-name" type="email">
                         </div>
           
-                        <div class="mb-4 w-1/2">
+                        <div class="mb-4 w-full md:w-1/2">
                           <label class="block text-gray-700 font-bold mb-2" for="last-name">
                             Phone Number
                           </label>
@@ -372,6 +374,27 @@
     }
 
   </script>
+
+  <!-- User Profile Sub-Menu Toggle Script -->
+<script> 
+  // Menu toggle button 
+    const toggleButtonThree = document.getElementById("profile-menubtn");
+    const toggleMenuThree = document.getElementById("profile-menu");
+    var toggleCounterThree = 1;
+    toggleButtonThree.onclick = function () {
+      toggleCounterThree++;
+      if(toggleCounterThree%2 == 0){
+        toggleMenuThree.classList.remove("hidden");
+        toggleMenuThree.classList.add("grid");
+      }
+      else{
+        toggleMenuThree.classList.remove("grid");
+        toggleMenuThree.classList.add("hidden");
+      }
+    }
+
+  </script>
+
 
 
 
