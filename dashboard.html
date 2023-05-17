@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenses & Glasses - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+<body class="font-sans">
+  <section class=" max-w-[1920px] ml-auto mr-auto">
+
+    <!-- Navigation Menu -->
+    <div class="relative custom-container">
+        
+        <nav class="static xl:fixed min-[2000px]:absolute top-0 left-0 flex flex-row xl:flex-col justify-between max-h-[800px]">
+            
+            <div class="">
+                <a href="index.html" class="h-10 w-10"><img class="py-5 ml-auto mr-auto h-20 xl:h-28" src="img/Site-Logo.png" alt=""></a>
+
+                <div class="bg-white xl:bg-transparent hidden xl:grid gap-3 absolute xl:static top-16 right-5 z-10 rounded-sm px-5 py-5 xl:py-0 2xl:py-5 max-h-[800px] xl:max-h-max overflow-y-scroll xl:overflow-visible" id="toggle-menu">
+
+                    <a class="menu-list bg-primaryColor text-white" href="#">
+                      <i class="fas fa-light fa-table-columns"></i>
+                      <span>Dashboard</span>
+                      </a>
+
+                    <a class="menu-list" href="#">
+                      <i class="fas fa-regular fa-list-check"></i>
+                      <span>Order Management</span>
+                    </a>
+
+                    <a class="menu-list" href="#">
+                      <i class="fas fa-solid fa-people-roof"></i>
+                      <span>Customers</span>
+                    </a>
+
+                    <a class="menu-list" href="student.html">
+                      <i class="fas fa-solid fa-circle-dollar-to-slot"></i>
+                      <span>Transaction</span>
+                    </a>
+
+                    <a class="menu-list" href="allStudents.html">
+                      <i class="fas fa-solid fa-list"></i>
+                      <span>Product List</span>
+                    </a>
+
+                    <a class="menu-list" href="#">
+                      <i class="fas fa-solid fa-users"></i>
+                      <span>Manage Moderator</span>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Logout Menu Section -->
+            <div class="flex items-center px-0 xl:px-4 py-3 xl:mt-10">
+                <a class="menu-list text-[#FD0D6E] hover:text-[#FD0D6E] hover:bg-transparent" href="#">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.75 9V5.25C15.75 4.65326 15.5129 4.08097 15.091 3.65901C14.669 3.23705 14.0967 3 13.5 3H7.5C6.90326 3 6.33097 3.23705 5.90901 3.65901C5.48705 4.08097 5.25 4.65326 5.25 5.25V18.75C5.25 19.3467 5.48705 19.919 5.90901 20.341C6.33097 20.7629 6.90326 21 7.5 21H13.5C14.0967 21 14.669 20.7629 15.091 20.341C15.5129 19.919 15.75 19.3467 15.75 18.75V15M18.75 15L21.75 12M21.75 12L18.75 9M21.75 12H9" stroke="#FD0D6E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                        
+                    <span class="hidden md:block">Log Out</span>
+                </a>
+                
+                <button class="block xl:hidden" id="toggle-button">
+                    <svg height="24px" width="24px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                      </svg>
+                </button>    
+                </a>
+
+            </div>
+                
+         
+
+        </nav>
+        
+    </div>
+
+
+
+
+    <!-- Right Side Section -->
+    <div class="ml-auto w-full xl:w-5/6 px-5 py-2">
+      <!-- Project Overview Header -->
+      <h6 class="font-bold text-left xl:mt-0 py-5">Project Over View</h6>
+
+        <div class="bg-gray-100 p-5 rounded-md border-t-2">
+
+            <!-- Details Section -->
+            <div class="grid col-span-2 xl:grid-cols-3 gap-5 text-tColor">
+
+                <div class="col-span-1 bg-white flex flex-col justify-center p-5 font-bold rounded-xl border-2">
+                    <i class="text-2xl fa-solid fa-chart-line"></i>
+                    <p class="text-base xl:text-md mt-2">Total Sales</p>
+                    <p class="text-lg xl:text-xl text-green-600">300k</p>
+                </div>
+
+                <div class="col-span-1 bg-white flex flex-col justify-center p-5 font-bold rounded-xl border-2">
+                    <i class="text-2xl fa-regular fa-calendar"></i>
+                    <p class="text-base xl:text-md mt-2">This Month</p>
+                    <p class="text-lg xl:text-xl text-green-600">30k</p>
+                </div>
+
+                <div class="col-span-2 xl:col-span-1 bg-white flex flex-col justify-center p-5 font-bold rounded-xl border-2">
+                  <i class="text-2xl fa-solid fa-chart-pie"></i>
+                  <p class="text-md mt-2">Sales by Categories</p>
+                  <p class="text-sm xl:text-base mt-1 flex items-center justify-between"><span>Men- <span class="text-green-600">30%</span> </span> | <span>Women- <span class="text-green-600">30%</span></span> | <span>Kids- <span class="text-green-600">30%</span></span></p>
+              </div>
+
+            </div>
+
+            <!-- Recent Orders Table -->
+            <div class="grid grid-cols-1 xl:grid-cols-3 pt-5 gap-5">
+
+              <div class="col-span-1 xl:col-span-2 bg-white px-5 py-5 flex flex-col justify-around border-2 rounded-xl">
+
+                <div class="flex justify-between items-center">
+                    <p class="font-bold">Recent Orders</p>
+                    <!-- <a class="flex items-center gap-2 rounded-md text-white px-3 py-2 bg-gradient-to-r from-orange-600 to-orange-400" href="#">
+                        <p>Filter</p>
+                        <i class="fa-solid fa-sort"></i>
+                    </a> -->
+                </div>
+
+                <div class="pt-5 overflow-x-scroll md:overflow-hidden">
+                    <table class="table-auto text-xs md:text-sm profile-table w-[150%] md:w-full">
+                        <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>Order</th>
+                            <!-- <th>Placed on</th> -->
+                            <th>Customer Name</th>
+                            <th>Order Date</th>
+                            <th>Status</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>#6545</td>
+                            <!-- <td>29/04/2023</td> -->
+                            <td>Ks Nayem</td>
+                            <td><span>01 Oct, 2023</span></td>
+                            <td>Paid</td>
+                            <td>$64</td>
+                            <td>
+                              <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>#5412</td>
+                            <!-- <td>29/04/2023</td> -->
+                            <td>Nafiul</td>
+                            <td><span>01 Oct, 2023</span><span></td>
+                            <td>Paid</td>
+                            <td>$557</td>
+                            <td>
+                              <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>#6622</td>
+                            <!-- <td>29/04/2023</td> -->
+                            <td>Moynul</td>
+                            <td><span>01 Oct, 2023</span><span></td>
+                            <td>Pending</td>
+                            <td>$156</td>
+                            <td>
+                              <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>#6622</td>
+                            <!-- <td>29/04/2023</td> -->
+                            <td>KS Nayem</td>
+                            <td><span>01 Oct, 2023</span><span></td>
+                            <td>Pending</td>
+                            <td>$156</td>
+                            <td>
+                              <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>#6622</td>
+                            <!-- <td>29/04/2023</td> -->
+                            <td>Nafiul</td>
+                            <td><span>01 Oct, 2023</span><span></td>
+                            <td>Pending</td>
+                            <td>$156</td>
+                            <td>
+                              <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+
+              <!-- Top Products Section -->
+              <div class="col-span-1 px-5 py-5  bg-white border-2 rounded-xl">
+
+                <p class="font-bold mb-5">Top Products</p>
+
+                <div class="grid gap-2">
+
+                  <div class="flex gap-5 items-center border-b-2 pb-2">
+                    <div class="h-14 w-14 flex justify-center items-center bg-gray-100">
+                      <img src="img/Glass-Product (1).webp" alt="">
+                    </div>
+                    <div>
+                      <p class="font-bold">Product Name</p>
+                      <span class="font-semibold text-green-500 border-green-500">$52</span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 items-center border-b-2 pb-2"">
+                    <div class="h-14 w-14 flex justify-center items-center bg-gray-100">
+                      <img src="img/Glass-Product (1).webp" alt="">
+                    </div>
+                    <div>
+                      <p class="font-bold">Product Name</p>
+                      <span class="font-semibold text-green-500 border-green-500">$52</span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 items-center border-b-2 pb-2"">
+                    <div class="h-14 w-14 flex justify-center items-center bg-gray-100">
+                      <img src="img/Glass-Product (1).webp" alt="">
+                    </div>
+                    <div>
+                      <p class="font-bold">Product Name</p>
+                      <span class="font-semibold text-green-500 border-green-500">$52</span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-5 items-center border-b-2 pb-2"">
+                    <div class="h-14 w-14 flex justify-center items-center bg-gray-100">
+                      <img src="img/Glass-Product (1).webp" alt="">
+                    </div>
+                    <div>
+                      <p class="font-bold">Product Name</p>
+                      <span class="font-semibold text-green-500 border-green-500">$52</span>
+                    </div>
+                  </div>
+
+                </div>              
+
+                
+
+              </div>
+
+            </div>
+
+        </div>
+    
+
+    </div>
+
+</section>
+
+<p class="text-xs px-4 py-2 fixed bottom-0 left-0">Main Admin Panel 2023</p>
+
+<!-- Script for menu -->
+<script>
+const toggleButton = document.getElementById("toggle-button");
+const toggleMenu = document.getElementById("toggle-menu");
+var toggleCounter = 1;
+toggleButton.onclick = function () {
+  toggleCounter++;
+  if(toggleCounter%2 == 0){
+    toggleMenu.classList.remove("hidden");
+    toggleMenu.classList.add("grid");
+  }
+  else{
+    toggleMenu.classList.remove("grid");
+    toggleMenu.classList.add("hidden");
+  }
+}
+
+
+const toggleButton2 = document.getElementById("toggle-button2");
+const toggleMenu2 = document.getElementById("toggle-menu2");
+var toggleCounter2 = 1;
+toggleButton2.onclick = function () {
+  toggleCounter2++;
+  if(toggleCounter2%2 == 0){
+    toggleMenu2.classList.remove("hidden");
+    toggleMenu2.classList.add("grid");
+  }
+  else{
+    toggleMenu2.classList.remove("grid");
+    toggleMenu2.classList.add("hidden");
+  }
+}
+
+
+</script>
+
+</body>
+</html>
