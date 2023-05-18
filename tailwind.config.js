@@ -8,6 +8,7 @@ module.exports = {
         primaryColorShade: '#E4E3FF',
         secondaryColor: '#A1A0BD',
         secondaryColorShade: '#d1d5db',
+        tertiaryColor: '#f97316',
         tColor:'#535353',
     },
       fontFamily:{

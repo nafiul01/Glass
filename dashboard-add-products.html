@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenses & Glasses - Dash-Order</title>
+    <title>Lenses & Glasses - Dash-Products</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -88,133 +88,92 @@
     <!-- Right Side Section -->
     <div class="ml-auto w-full xl:w-5/6 px-5 py-2">
       <!-- Project Overview Header -->
-      <h6 class="font-bold text-left xl:mt-0 py-5">Order Management</h6>
+        <h6 class="font-bold text-left xl:mt-0 py-5">Add Product</h6>
 
         <div class="bg-gray-100 p-5 rounded-md border-t-2">
 
 
             <!-- All Orders Table -->
-            <div class="">
-
-              <div class="bg-white px-5 py-5 flex flex-col justify-around border-2 rounded-xl">
-
-                <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-3">
-                    <ul class="flex gap-5 border-b-2 pb-2 flex-wrap">
-                      <li><a href="" class="font-bold border-b-2 border-tertiaryColor pb-[10px]">All</a></li>
-                      <li><a href="">Pending</a></li>
-                      <li><a href="">Confirmed</a></li>
-                      <li><a href="">Processing</a></li>
-                      <li><a href="">Cancelled</a></li>
-                    </ul>
-                    <input class="py-1 px-3 border-2 rounded-md focus:outline-none" type="text" placeholder="Search Customers">
+            <form action="">
+              <div class="flex gap-5 flex-wrap">
+                
+                <div class="flex items-center">
+                  <label for="dropzone-file" class="flex flex-col items-center justify-center border-2 border-gray-400 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                      <div class="flex flex-col items-center justify-center p-5">
+                          <svg aria-hidden="true" class="w-10 h-10 mb-3 text-tertiaryColor" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                          <p class="mb-2 text-sm font-semibold text-tColor text-center">Upload Your <br> Product Picture</p>
+                      </div>
+                      <input id="dropzone-file" type="file" class="hidden" />
+                  </label>
                 </div>
 
-                <div class="pt-5 overflow-x-scroll md:overflow-hidden">
-                  <table class="table-auto text-xs md:text-sm profile-table w-[150%] md:w-full">
-                    <thead>
-                      <tr>
-                        <th>No</th>
-                        <th>Order</th>
-                        <!-- <th>Placed on</th> -->
-                        <th>Customer Name</th>
-                        <th>Order Date</th>
-                        <th>Status</th>
-                        <th>Amount</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>#6545</td>
-                        <!-- <td>29/04/2023</td> -->
-                        <td>Ks Nayem</td>
-                        <td><span>01 Oct, 2023</span></td>
-                        <td>Paid</td>
-                        <td>$64</td>
-                        <td>
-                          <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>2</td>
-                        <td>#5412</td>
-                        <!-- <td>29/04/2023</td> -->
-                        <td>Nafiul</td>
-                        <td><span>01 Oct, 2023</span><span></td>
-                        <td>Paid</td>
-                        <td>$557</td>
-                        <td>
-                          <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>3</td>
-                        <td>#6622</td>
-                        <!-- <td>29/04/2023</td> -->
-                        <td>Moynul</td>
-                        <td><span>01 Oct, 2023</span><span></td>
-                        <td>Pending</td>
-                        <td>$156</td>
-                        <td>
-                          <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>4</td>
-                        <td>#6622</td>
-                        <!-- <td>29/04/2023</td> -->
-                        <td>KS Nayem</td>
-                        <td><span>01 Oct, 2023</span><span></td>
-                        <td>Pending</td>
-                        <td>$156</td>
-                        <td>
-                          <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>5</td>
-                        <td>#6622</td>
-                        <!-- <td>29/04/2023</td> -->
-                        <td>Nafiul</td>
-                        <td><span>01 Oct, 2023</span><span></td>
-                        <td>Pending</td>
-                        <td>$156</td>
-                        <td>
-                          <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
+                <div class="flex items-center justify-center aspect-square">
+                  <img src="img/Glass-Product (1).webp" alt="" class="h-auto w-32">
+                </div>
+                
+                <div class="flex items-center justify-center aspect-square">
+                  <img src="img/Glass-Product (2).webp" alt="" class="h-auto w-32">
                 </div>
 
-                  <!-- Page Select -->
-                  <div class="flex flex-col xl:flex-row justify-between xl:items-center p-5">
-                    
-                    <div class="scale-75 xl:scale-100 grid grid-flow-col content-center ml-auto mr-auto xl:mr-0 font-semibold text-tColor gap-3">
-                        <a class="bg-gray-100 h-8 w-8 rounded flex items-center justify-center"  href="#"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.125 0.75L0.875 7L7.125 13.25" stroke="#939292" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </a>
-                        <a class="bg-tertiaryColor text-white h-8 w-8 rounded flex items-center justify-center"  href="#">1</a>
-                        <a class="bg-gray-200 h-8 w-8 rounded flex items-center justify-center" href="#">2</a>
-                        <a class="bg-gray-200 h-8 w-8 rounded flex items-center justify-center"  href="#">3</a>
-                        <a class="bg-gray-100 h-8 w-8 rounded flex items-center justify-center"  href="#"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.875 0.75L7.125 7L0.875 13.25" stroke="#939292" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </a>
-                    </div>
-                  </div>
+                <div class="flex items-center justify-center aspect-square">
+                  <img src="img/Glass-Product (3).webp" alt="" class="h-auto w-32">
+                </div>
 
               </div>
 
+              <div>
+                <p class="mt-5 mb-2">Product Name</p>
+                <input class="bg-white w-full max-w-[500px] border-2 border-orange-300 first-line:appearance-none  rounded-md py-3 px-5 text-gray-800 leading-tight focus:outline-tertiaryColor focus:shadow-outline" id="last-name" type="text" placeholder="Enter Product Name" />
+              </div>
 
-            </div>
+              <div>
+                <p class="mt-5 mb-2">Product Price</p>
+                <input class="bg-white w-full max-w-[200px] border-2 border-orange-300 first-line:appearance-none  rounded-md py-3 px-5 text-gray-800 leading-tight focus:outline-tertiaryColor focus:shadow-outline" id="last-name" type="text" placeholder="Enter Product Price" />
+              </div>
+
+              <div>
+                <p class="mt-5 mb-2">Product Description</p>
+                <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Write Product Description" class="bg-white w-full max-w-[500px] border-2 border-orange-300 first-line:appearance-none  rounded-md py-3 px-5 text-gray-800 leading-tight focus:outline-tertiaryColor focus:shadow-outline"></textarea>
+              </div>
+
+              <div class="flex gap-5 mt-5 flex-wrap">
+
+                <div class="relative">
+                  <select id="main-category" class="border-2 border-orange-300 py-3 pl-5 pr-10 appearance-none focus:outline-tertiaryColor focus:shadow-outline rounded-md">
+                    <option value="volvo" hidden>Main Category</option>
+                    <option value="saab">Men</option>
+                    <option value="opel">Women</option>
+                    <option value="audi">Kids</option>
+                  </select>
+
+                  <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+                
+                <div class="relative">
+                  <select id="main-category" class="border-2 border-orange-300 py-3 pl-5 pr-10 appearance-none focus:outline-tertiaryColor focus:shadow-outline rounded-md">
+                    <option value="volvo" hidden>Sub Category</option>
+                    <option value="saab">Men</option>
+                    <option value="opel">Women</option>
+                    <option value="audi">Kids</option>
+                  </select>
+
+                  <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="mt-10">
+                <button class="bg-tertiaryColor text-white px-5 py-3 rounded-md">Submit</button>
+                <button class="px-5 py-3 mt-5 rounded-md">Reset</button>
+              </div>
+
+            </form>
+
+
 
         </div>
     
