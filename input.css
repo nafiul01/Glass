@@ -40,7 +40,7 @@
     }
 
     .menu-list:hover{
-        @apply bg-primaryColor text-white;
+        @apply bg-orange-600 text-white;
     }
 
     .menu-list>i{

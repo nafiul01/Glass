@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenses & Glasses - Dash-Transaction</title>
+    <title>Lenses & Glasses - Dash-Order Tracking</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -16,7 +16,7 @@
     <!-- Navigation Menu -->
     <div class="relative">
         
-        <nav class="static xl:fixed min-[2000px]:absolute top-0 flex flex-row xl:flex-col justify-between max-h-[800px] custom-container">
+        <nav class="static xl:fixed min-[2000px]:absolute top-0 left-0 flex flex-row xl:flex-col justify-between max-h-[800px] custom-container">
             
             <div class="">
                 <a href="index.html" class="h-10 w-10"><img class="py-5 ml-auto mr-auto h-20 xl:h-28" src="img/Site-Logo.png" alt=""></a>
@@ -93,7 +93,7 @@
     <!-- Right Side Section -->
     <div class="ml-auto w-full xl:w-5/6 px-5 py-2">
       <!-- Project Overview Header -->
-      <h6 class="font-bold text-left xl:mt-0 py-5">Transaction</h6>
+      <h6 class="font-bold text-left xl:mt-0 py-5">Order Tracking</h6>
 
         <div class="bg-gray-100 p-5 rounded-md border-t-2">
 
@@ -106,83 +106,118 @@
                 <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-3">
                     <ul class="flex gap-5 border-b-2 pb-2 flex-wrap">
                       <li><a href="" class="font-bold border-b-2 border-tertiaryColor pb-[10px]">All</a></li>
-                      <li><a href="">Pending</a></li>
-                      <li><a href="">Confirmed</a></li>
-                      <li><a href="">Cancelled</a></li>
+                      <li><a href="">Processing</a></li>
+                      <li><a href="">Shipped</a></li>
+                      <li><a href="">Delivered</a></li>
                     </ul>
-                    <input class="py-1 px-3 border-2 rounded-md focus:outline-none" type="text" placeholder="Search Transaction">
+                    <input class="py-1 px-3 border-2 rounded-md focus:outline-none" type="text" placeholder="Search Customers">
                 </div>
 
                 <div class="pt-5 overflow-x-scroll md:overflow-hidden">
                   <table class="table-auto text-xs md:text-sm profile-table w-[150%] md:w-full">
                     <thead>
                       <tr>
-                        <th>ID</th>
+                        <th>No</th>
+                        <th>Order</th>
+                        <!-- <th>Placed on</th> -->
                         <th>Customer Name</th>
-                        <th>Date</th>
-                        <th>Total</th>
-                        <th>Mathod</th>
+                        <th>Order Date</th>
                         <th>Status</th>
+                        <th>Amount</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>#6545</td>
                         <!-- <td>29/04/2023</td> -->
                         <td>Ks Nayem</td>
                         <td><span>01 Oct, 2023</span></td>
+                        <td>
+                          <select id="main-category" class="focus:outline-none focus:shadow-outline">
+                            <option value="saab">Processing</option>
+                            <option value="audi">Shipped</option>
+                            <option value="audi">Delivered</option>
+                          </select>
+                        </td>
                         <td>$64</td>
-                        <td>CC</td>
-                        <td>Paid</td>
                         <td>
                           <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
                         </td>
                       </tr>
 
                       <tr>
+                        <td>2</td>
                         <td>#5412</td>
+                        <!-- <td>29/04/2023</td> -->
                         <td>Nafiul</td>
                         <td><span>01 Oct, 2023</span><span></td>
+                        <td>
+                          <select id="main-category" class="focus:outline-none focus:shadow-outline">
+                            <option value="saab">Processing</option>
+                            <option value="audi">Shipped</option>
+                            <option value="audi">Delivered</option>
+                          </select>
+                        </td>
                         <td>$557</td>
-                        <td>CC</td>
-                        <td>Paid</td>
                         <td>
                           <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
                         </td>
                       </tr>
 
                       <tr>
+                        <td>3</td>
                         <td>#6622</td>
+                        <!-- <td>29/04/2023</td> -->
                         <td>Moynul</td>
                         <td><span>01 Oct, 2023</span><span></td>
+                        <td>
+                          <select id="main-category" class="focus:outline-none focus:shadow-outline">
+                            <option value="saab">Processing</option>
+                            <option value="audi">Shipped</option>
+                            <option value="audi">Delivered</option>
+                          </select>
+                        </td>
                         <td>$156</td>
-                        <td>CC</td>
-                        <td>Pending</td>
                         <td>
                           <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
                         </td>
                       </tr>
 
                       <tr>
+                        <td>4</td>
                         <td>#6622</td>
+                        <!-- <td>29/04/2023</td> -->
                         <td>KS Nayem</td>
                         <td><span>01 Oct, 2023</span><span></td>
+                        <td>
+                          <select id="main-category" class="focus:outline-none focus:shadow-outline">
+                            <option value="saab">Processing</option>
+                            <option value="audi">Shipped</option>
+                            <option value="audi">Delivered</option>
+                          </select>
+                        </td>
                         <td>$156</td>
-                        <td>CC</td>
-                        <td>Pending</td>
                         <td>
                           <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
                         </td>
                       </tr>
 
                       <tr>
+                        <td>5</td>
                         <td>#6622</td>
+                        <!-- <td>29/04/2023</td> -->
                         <td>Nafiul</td>
                         <td><span>01 Oct, 2023</span><span></td>
+                        <td>
+                          <select id="main-category" class="focus:outline-none focus:shadow-outline">
+                            <option value="saab">Processing</option>
+                            <option value="audi">Shipped</option>
+                            <option value="audi">Delivered</option>
+                          </select>
+                        </td>
                         <td>$156</td>
-                        <td>CC</td>
-                        <td>Pending</td>
                         <td>
                           <a href=""><i class="fa-regular fa-file-lines text-lg text-orange-600"></i></a>
                         </td>
@@ -192,23 +227,24 @@
 
                 </div>
 
-                  <!-- Page Select -->
-                  <div class="flex flex-col xl:flex-row justify-between xl:items-center p-5">
-                    
-                    <div class="scale-75 xl:scale-100 grid grid-flow-col content-center ml-auto mr-auto xl:mr-0 font-semibold text-tColor gap-3">
-                        <a class="bg-gray-100 h-8 w-8 rounded flex items-center justify-center"  href="#"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.125 0.75L0.875 7L7.125 13.25" stroke="#939292" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </a>
-                        <a class="bg-tertiaryColor text-white h-8 w-8 rounded flex items-center justify-center"  href="#">1</a>
-                        <a class="bg-gray-200 h-8 w-8 rounded flex items-center justify-center" href="#">2</a>
-                        <a class="bg-gray-200 h-8 w-8 rounded flex items-center justify-center"  href="#">3</a>
-                        <a class="bg-gray-100 h-8 w-8 rounded flex items-center justify-center"  href="#"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.875 0.75L7.125 7L0.875 13.25" stroke="#939292" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </a>
-                    </div>
+                <!-- Page Select -->
+                <div class="flex flex-col xl:flex-row justify-between xl:items-center p-5">
+                  
+                  <div class="scale-75 xl:scale-100 grid grid-flow-col content-center ml-auto mr-auto xl:mr-0 font-semibold text-tColor gap-3">
+                      <a class="bg-gray-100 h-8 w-8 rounded flex items-center justify-center"  href="#"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.125 0.75L0.875 7L7.125 13.25" stroke="#939292" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          </a>
+                      <a class="bg-tertiaryColor text-white h-8 w-8 rounded flex items-center justify-center"  href="#">1</a>
+                      <a class="bg-gray-200 h-8 w-8 rounded flex items-center justify-center" href="#">2</a>
+                      <a class="bg-gray-200 h-8 w-8 rounded flex items-center justify-center"  href="#">3</a>
+                      <a class="bg-gray-100 h-8 w-8 rounded flex items-center justify-center"  href="#"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.875 0.75L7.125 7L0.875 13.25" stroke="#939292" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          </a>
                   </div>
+                </div>
+
 
               </div>
 
